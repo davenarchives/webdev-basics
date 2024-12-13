@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Navigation Bar</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 10px 40px; 
+            background-color: rgb(27, 173, 124);
+        }
+
+        .site-name {
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none; 
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: rgb(255, 253, 253);
+            font-weight: bold;
+        }
+
+        .nav-links li {
+            box-sizing: border-box;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .nav-links li:hover {
+            background-color: rgb(64, 225, 214);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="site-name"><h1>My Website</h1></div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
