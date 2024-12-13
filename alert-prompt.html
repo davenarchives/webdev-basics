@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert-Prompt</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            height: 80px;
+            width: 180px;
+            border-radius: 20px;
+            background-color: tomato;
+            border: 2px solid black;
+            margin: 1rem;
+        }
+
+        button:hover {
+            background-color: rgb(199, 61, 36);
+        }
+
+        button a{
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <button><a onclick="alert('Are you sure?')" href="https://www.youtube.com/watch?v=JeXqaKeJSRI&ab_channel=BroCode" target="_blank">Click Me!</a></button>
+    <button><a onclick="checker()" href="https://github.com/davenarchives/webdev-basics" target="_blank">Don't click me</button>
+    <script>
+        alert("Welcome to my website")
+        function checker() {
+            var result = confirm('Are you sure?');
+            if (result == false) {
+                event.preventDefault();
+            }
+        }
+
+        var name = prompt("What is your name?");
+        if (name == null || name == "") {
+            txt = "No name provided";
+        } else {
+            txt = "Hello, " + name + "!";
+        }
+        alert(txt)
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+    <style>
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+        }
+        #myBox {
+            height: 300px;
+            width: 300px;
+            background-color: greenyellow;
+            font-size: 4rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div id="myBox">
+        Click Me 🙂
+    </div>
+    <script>
+        const myBox = document.getElementById("myBox");
+
+        myBox.addEventListener("click", event => {
+            event.target.style.backgroundColor="tomato";
+            event.target.textContent = "OUCH! 😖";
+        });
+
+        myBox.addEventListener("mouseover", event => {
+            event.target.style.backgroundColor="yellow";
+            event.target.textContent = "Don't do it 😓";
+        });
+
+        myBox.addEventListener("mouseout", event => {
+            event.target.style.backgroundColor="lightgreen";
+            event.target.textContent = "Click Me 🙂";
+        });
+    </script>
+</body>
+</html>
